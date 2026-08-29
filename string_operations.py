@@ -327,6 +327,109 @@ for ch in s:
 
 print(others + specials)
 
+#Insert an asterisk (*) before each numeric character (0-9) in a given string.
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if ch.isdigit():
+        result += "*" + ch
+    else:
+        result += ch
+
+print(result)
+
+
+#Insert an asterisk (*) before each occurrence of the characters 'a' and 'A' in a given string.
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if ch == 'a' or ch == 'A':
+        result += "*" + ch
+    else:
+        result += ch
+
+print(result)
+
+
+#Insert an asterisk (*) before each vowel (a, e, i, o, u) in a given string.
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if ch in vowels:
+        result += "*" + ch
+    else:
+        result += ch
+
+print(result)  
+
+
+#Write a Java program that removes all leading and trailing spaces from a given string.
+
+# Input string
+s = input()
+
+# Remove leading and trailing spaces
+print(s.strip())
+
+
+#Remove all lowercase characters from a given string.
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if not ch.islower():
+        result += ch
+
+print(result)
+
+#Remove all consonants from a given string.
+
+S = input()
+
+vowels = "aeiouAEIOU"
+result = ""
+
+for ch in s:
+    if ch.isalpha() and ch not in vowels:
+        continue
+    result += ch
+
+print(result)
+#Remove all numeric characters from a given string.
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if not ch.isdigit():
+        result += ch
+
+print(result)
+
+#Remove all special characters from a given string.
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if ch.isalnum():
+        result += ch
+
+print(result)
+            
 
 
 
