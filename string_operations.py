@@ -227,6 +227,115 @@ print("Vowels:", v_count)
 print("Consonants:", c_count)
 print("Special Characters:", s_count)
 
+# Add * before every occurrence of a in the string
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if ch == 'a':
+        result += "*" + ch
+    else:
+        result += ch
+
+print(result)
+
+# Remove all vowels from the string
+
+s = input()
+
+vowels = "aeiouAEIOU"
+result = ""
+
+for ch in s:
+    if ch not in vowels:
+        result += ch
+
+print(result)
+
+# Swap uppercase characters to lowercase and lowercase characters to uppercase
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if ch.isupper():
+        result += ch.lower()
+    elif ch.islower():
+        result += ch.upper()
+    else:
+        result += ch
+
+print(result)
+
+# Convert the given string to uppercase
+
+s = input()
+
+print(s.upper())
+
+# Convert the given string to lowercase
+
+s = input()
+
+print(s.lower())
+
+# Move all digits to the end of the string
+
+s = input()
+
+letters = ""
+digits = ""
+
+for ch in s:
+    if ch.isdigit():
+        digits += ch
+    else:
+        letters += ch
+
+print(letters + digits)
+
+# Keep letters first and digits after them
+
+s = input()
+
+letters = ""
+digits = ""
+
+for ch in s:
+    if ch.isdigit():
+        digits += ch
+    else:
+        letters += ch
+
+print(letters + digits)
+
+# Move all special characters to the end of the string
+
+s = input()
+
+specials = ""
+others = ""
+
+for ch in s:
+    if not ch.isalnum() and ch != ' ':
+        specials += ch
+    else:
+        others += ch
+
+print(others + specials)
+
+
+
+
+
+
+
+
+
+
 
 
 
