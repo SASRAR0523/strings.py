@@ -429,6 +429,106 @@ for ch in s:
         result += ch
 
 print(result)
+
+#Given a lowercase string, remove duplicate characters from it.
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if ch not in result:
+        result += ch
+
+print(result
+
+#Given a string, sort it in ascending order.
+
+# Input string
+s = input()
+
+# Sort characters and join
+print("".join(sorted(s)))
+
+#Given a string, calculate the sum of all the digits in the string and concatenate the sum at the end.
+
+s = input()
+
+digit_sum = 0
+result = ""
+
+for ch in s:
+    if ch.isdigit():
+        digit_sum += int(ch)
+    else:
+        result += ch
+                                              
+result += str(digit_sum)
+
+print(result)
+
+#Given a string, replace all uppercase letters with '#' characters.
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if ch.isupper():
+        result += "#"
+    else:
+        result += ch
+
+print(result)
+
+#Converts a given string to its corresponding ASCII values.
+
+s = input()
+
+result = []
+
+for ch in s:
+    result.append(str(ord(ch)))
+
+# Output
+print(" ".join(result))
+
+#Given a string, remove all alphanumeric characters and return the modified string.
+
+
+s = input()
+
+result = ""
+
+for ch in s:
+    # remove letters and digits
+    if not ch.isalnum():
+        result += ch
+
+print(result)
+
+#Remove all uppercase characters from a given string.
+
+s = input()
+
+result = ""
+
+for ch in s:
+    if not ch.isupper():
+        result += ch
+
+print(result)
+
+
+
+
+
+
+
+
+
+
+
             
 
 
