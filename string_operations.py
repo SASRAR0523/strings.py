@@ -519,6 +519,121 @@ for ch in s:
 
 print(result)
 
+#Given a string, find the smallest word from it.
+
+str1 = input()
+str2 = input()
+
+count = 0
+n = len(str2)
+
+# Traverse str1
+for i in range(len(str1) - n + 1):
+    if str1[i:i+n] == str2:
+        count += 1
+
+print(count)
+
+#Print the largest palindromic substring of a given string.
+
+s = input()
+
+longest = ""
+
+for i in range(len(s)):
+    for j in range(i, len(s)):
+        sub = s[i:j+1]
+
+        if sub == sub[::-1] and len(sub) > len(longest):
+            longest = sub
+
+print(longest)
+
+#Print all palindromic substrings of length 4 from a given string.
+
+s = input()
+
+result = []
+
+for i in range(len(s) - 3):
+    sub = s[i:i+4]
+            
+    if sub == sub[::-1]:
+        result.append(sub)
+                      
+print(" ".join(result))
+
+#Print all palindromic substrings of a given string.
+
+s = input()
+
+palindromes = []
+for i in range(len(s)):
+    for j in range(i, len(s)):
+        sub = s[i:j+1]
+        if sub == sub[::-1]:
+            palindromes.append(sub)
+
+palindromes.sort(key=len)
+
+for p in palindromes:
+    print(p)
+
+#Given a string and a substring, find the frequency of the substring in the string.
+
+s = input()
+sub = input()
+
+count = 0
+n = len(sub)
+
+# slide through main string
+for i in range(len(s) - n + 1):
+    if s[i:i+n] == sub:
+        count += 1
+
+print(count)
+
+#Print all possible substrings of a given string.
+
+s = input()
+
+# Generate and print all substrings
+for i in range(len(s)):
+    for j in range(i, len(s)):
+        print(s[i:j+1])
+
+#Check whether characters in the second string are present in the first string . There is no need for the characters to be consecutive.
+
+str1 = input()
+str2 = input()
+
+i = 0  # pointer for str1
+j = 0  # pointer for str2
+
+while i < len(str1) and j < len(str2):
+    if str1[i] == str2[j]:
+        j += 1
+    i += 1
+
+if j == len(str2):
+    print("Yes")
+else:
+    print("No")
+
+#Given a string, find the smallest word from it.
+
+s = input()
+
+words = s.split()
+
+smallest = words[0]
+
+for w in words:
+    if len(w) < len(smallest):
+        smallest = w
+
+print(smallest)
 
 
 
