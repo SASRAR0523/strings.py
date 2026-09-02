@@ -635,6 +635,83 @@ for w in words:
 
 print(smallest)
 
+#Given a string, find the largest word from it.
+
+# Input string
+s = input()
+
+words = s.split()
+
+largest = words[0]
+
+for w in words:
+    if len(w) > len(largest):
+        largest = w
+
+print(largest)
+
+#Write a program to swap the words present at odd indexes with the words present at even indexes. 
+
+# Input string
+s = input()
+
+words = s.split()
+
+# swap adjacent words
+for i in range(0, len(words) - 1, 2):
+    words[i], words[i + 1] = words[i + 1], words[i]
+
+print(" ".join(words))
+
+#Find the count of characters after each word in a given string.
+
+s = input().strip()
+
+words = s.split()
+
+result = []
+
+for w in words:
+    result.append(w + str(len(w)))
+
+print(" ".join(result))
+
+#Reverse all the words in a given string while maintaining the order of the words.
+
+# Input string
+s = input()
+
+words = s.split()
+
+result = []
+
+for w in words:
+    result.append(w[::-1])  # reverse each word
+
+print(" ".join(result))
+
+#Remove duplicate characters from a given string, preserving the original order.
+
+s = input()
+seen = set()
+result = []
+
+for ch in s:
+    if ch not in seen:
+        seen.add(ch)
+        result.append(ch)
+        
+print("".join(result))
+
+#Remove duplicate characters from a given string and output the remaining characters in lexicographical order.
+
+s = input()
+
+unique_chars = set(s)
+sorted_chars = sorted(unique_chars)
+
+print(" ".join(sorted_chars))
+
 
 
 
