@@ -712,6 +712,27 @@ sorted_chars = sorted(unique_chars)
 
 print(" ".join(sorted_chars))
 
+# Given a string s, find the longest palindromic substring in s.
+
+# Input Format
+# A string s consisting of digits and English letters.
+
+# Output Format
+# Return a string, the longest palindromic substring found in s.
+
+s = input()
+
+longest = ""
+
+for i in range(len(s)):
+    for j in range(i, len(s)):
+        sub = s[i:j+1]
+
+        if sub == sub[::-1]:
+            if len(sub) > len(longest):
+                longest = sub
+
+print(longest)
 
 
 
