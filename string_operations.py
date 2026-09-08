@@ -734,6 +734,71 @@ for i in range(len(s)):
 
 print(longest)
 
+# Write a program to check if a given string is a valid password.
+# A valid password must contain at least one uppercase letter, 
+# one lowercase letter, one digit, and one special character.
+
+password = input()
+
+upper = False
+lower = False
+digit = False
+special = False
+
+for ch in password:
+    if ch.isupper():
+        upper = True
+    elif ch.islower():
+        lower = True
+    elif ch.isdigit():
+        digit = True
+    else:
+        special = True
+
+if upper and lower and digit and special:
+    print("Valid Password")
+else:
+    print("Invalid Password")
+
+# Write a program that identifies repeating characters in a given word and displays the result in a specific format.
+
+# If only one character repeats:
+
+# Output → "[letter] is repeating"
+
+word = input()
+
+count = {}
+
+for ch in word:
+    count[ch] = count.get(ch, 0) + 1
+
+repeating = []
+
+for ch in word:
+    if count[ch] > 1 and ch not in repeating:
+        repeating.append(ch)
+
+if len(repeating) == 0:
+    print("non-repeating")
+elif len(repeating) == 1:
+    print(repeating[0] + " is repeating")
+else:
+    print(" and ".join(repeating) + " are repeating")
+
+# Find the count of characters after each word in a given string.
+
+s = input()
+
+words = s.split()
+
+for word in words:
+    print(word + str(len(word)), end=" ")
+
+
+
+
+
 
 
 
