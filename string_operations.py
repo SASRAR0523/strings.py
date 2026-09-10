@@ -795,7 +795,83 @@ words = s.split()
 for word in words:
     print(word + str(len(word)), end=" ")
 
+# Write a program to generate a right angle triangle pattern with the number of rows equal to the input number. 
+# Each row contains '*' symbols equal to its row number.
 
+n = int(input())
+
+for row in range(1,n+1):
+    line = ""
+    for star in range(row):
+        line = line + "*"
+
+    print(line)
+
+# Print all prime numbers between n1 and n2.
+
+n1, n2 = map(int, input().split())
+
+found = False
+
+for num in range(n1, n2 + 1):
+    if num < 2:
+        continue
+
+    prime = True
+
+    for i in range(2, num):
+        if num % i == 0:
+            prime = False
+            break
+
+    if prime:
+        print(num, end=" ")
+        found = True
+
+if not found:
+    print("No output")
+
+# Convert a given time from 12-hour format to 24-hour format. The input time will be provided in 12-hour format with AM/PM notation,
+# and you need to print it in 24-hour format. The 12-hour format will include hours, minutes, seconds, and the AM/PM suffix.
+
+time = input().strip()
+
+period = time[-2:]
+time = time[:-2]
+
+hour, minute, second = time.split(":")
+
+hour = int(hour)
+
+if period == "PM" and hour != 12:
+    hour += 12
+
+if period == "AM" and hour == 12:
+    hour = 0
+
+print(f"{hour:02d}:{minute}:{second}")
+
+# Write a program to generate a square pattern of size n x n. Each row of the pattern contains numbers from 1 to n.
+
+n = int(input())
+
+for i in range(n):
+    for j in range(1, n + 1):
+        print(j, end=" ")
+    print()
+
+# Write a program to generate a Hollow square pattern. The size of the square (n) will be provided as input 
+# and your program should print out a square pattern with '*' as the border and space ' ' as the interior.
+
+n = int(input())
+
+for i in range(n):
+    for j in range(n):
+        if i == 0 or i == n - 1 or j == 0 or j == n - 1:
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()
 
 
 
