@@ -1,28 +1,30 @@
+# String Concatenation: Read two strings and print their concatenation.
 
 a = input()
 b = input()
 
-print(a+b)
+print(a + b)
 
-
+# Character at Given Index: Read a string and an index, then print the character at that index or "Invalid index" if the index is out of range.
 
 s = input()
 k = int(input())
 
-if k>=0 and k < len(s):
+if k >= 0 and k < len(s):
     print(s[k])
 else:
     print("Invalid index")
+    
+# Characters at Odd Indices: Read a string and print the characters located at odd indices, or a message if no such characters exist.
 
+s = input()
 
-
-s = input() 
-
-if len(s) <= 1: 
-    print("No characters found at odd indices.") 
-else: 
+if len(s) <= 1:
+    print("No characters found at odd indices.")
+else:
     print(*s[1::2])
-
+    
+# Characters at Even Indices: Read a string and print the characters located at even indices, or a message if the string is empty.
 
 s = input()
 
@@ -30,21 +32,14 @@ if len(s) == 0:
     print("No characters found at even indices.")
 else:
     print(*s[0::2])
+    
+# String Reversal: Read a string and print it in reverse order.
 
+s = input()
 
-#Reverses a given string.
-#Input Format
-#The input consists of a single line containing a string.
-#Output Format
-#Output the reversed string.
+print(s[::-1])
 
-S = input()
-
-Print(s[::-1])
-
-
-
-
+# Palindrome Check: Read a string and print "Yes" if it reads the same forward and backward; otherwise, print "No".
 
 s = input()
 
@@ -52,8 +47,7 @@ if s == s[::-1]:
     print("Yes")
 else:
     print("No")
-
-
+    
 #Prints all the alphabetic characters present in a given string in the order of their occurrence.
 #Input Format
 #The program takes a single line of input containing a string. The string can contain alphabets (both uppercase and lowercase), whitespaces, and special characters.
