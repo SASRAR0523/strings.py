@@ -918,7 +918,31 @@ class Solution:
 
         return dummy.next
 
+# writing a program to calculate the tax based on a person's income. Use if-else ladder to determine the tax bracket for an individual based on their income.
 
+income = 60000
+
+if income <= 20000:
+    print("Tax: 5%")
+elif income <= 50000:
+    print("Tax: 10%")
+elif income <= 100000:
+    print("Tax: 20%")
+else:
+    print("Tax: 30%")
+
+# Write a python program that takes the current hour (in 24-hour format) as input and recommends a suitable meal using an if–else if–else ladder.
+
+hour = int(input())
+
+if 6 <= hour < 10:
+    print("Suggested Meal: Breakfast")
+elif 12 <= hour < 15:
+    print("Suggested Meal: Lunch")
+elif 19 <= hour < 21:
+    print("Suggested Meal: Dinner")
+else:
+    print("Suggested Meal: Snack or Rest Time")
 
 
 
