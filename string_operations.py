@@ -944,11 +944,24 @@ elif 19 <= hour < 21:
 else:
     print("Suggested Meal: Snack or Rest Time")
 
+# You are given two integers m and n, representing the number of rows and columns of a grid.
 
+# Construct any m x n grid consisting only of the characters '.' and '#', where:
 
+# '.' represents a free cell.
+# '#' represents an obstacle cell.
 
+  class Solution:
+    def createGrid(self, m: int, n: int) -> List[str]:
+        grid = []
 
-            
+        for i in range(m):
+            if i == 0:
+                grid.append('.' * n)
+            else:
+                grid.append('#' * (n - 1) + '.')
+
+        return grid          
 
 
 
