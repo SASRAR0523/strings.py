@@ -962,8 +962,29 @@ else:
                 grid.append('#' * (n - 1) + '.')
 
         return grid          
+# The same instance of Foo will be passed to three different threads. Thread A will call first(), thread B will call second(), and thread C will call third().
+# Design a mechanism and modify the program to ensure that second() is executed after first(), and third() is executed after second().
 
 
+from threading import Semaphore
+
+class Foo:
+    def __init__(self):
+        self.first_done = Semaphore(0)
+        self.second_done = Semaphore(0)
+
+    def first(self, printFirst) -> None:
+        printFirst()
+        self.first_done.release()
+
+    def second(self, printSecond) -> None:
+        self.first_done.acquire()
+        printSecond()
+        self.second_done.release()
+
+    def third(self, printThird) -> None:
+        self.second_done.acquire()
+        printThird()
 
 
 
