@@ -986,6 +986,21 @@ class Foo:
         self.second_done.acquire()
         printThird()
 
+# Write a program that takes a student’s marks as input, validates the marks, and then classifies the result.
+
+marks = int(input())
+
+if marks < 0 or marks > 100:
+    print("Invalid marks entered!")
+else:
+    if marks >= 40:
+        if marks >= 75:
+            print("Passed with Distinction")
+        else:
+            print("Passed")
+    else:
+        print("Failed")
+
 
 
 
