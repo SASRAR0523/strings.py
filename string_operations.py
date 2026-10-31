@@ -1001,6 +1001,47 @@ else:
     else:
         print("Failed")
 
+# Given a string S, the task is to print all the duplicate characters along with their occurrences in the given string. A character is considered duplicate
+# if it appears more than once in the string.If there are no duplicate characters found then "No Duplicate Characters Found." should be the output.
+
+s = input()
+
+freq = {}
+
+for ch in s:
+    freq[ch] = freq.get(ch, 0) + 1
+
+found = False
+
+for ch in sorted(freq):
+    if freq[ch] > 1:
+        print(f"{ch}, count = {freq[ch]}")
+        found = True
+
+if not found:
+    print("No Duplicate Characters Found.")
+
+# Write a function that reverses a string. The input string is given as an array of characters s.
+# You must do this by modifying the input array in-place with O(1) extra memory.
+
+n = int(input())
+s = input().split()
+
+left = 0
+right = n - 1
+
+while left < right:
+    s[left], s[right] = s[right], s[left]
+    left += 1
+    right -= 1
+
+print(*s)
+
+
+
+
+
+
 
 
 
