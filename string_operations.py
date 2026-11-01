@@ -1037,6 +1037,31 @@ while left < right:
 
 print(*s)
 
+# Given a lowercase string, remove duplicate characters from it.
+
+s = input()
+result = ""
+
+for ch in s:
+    if ch not in result:
+        result += ch
+
+print(result)
+
+# Print the elements that occur only once in a sorted array.
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+result = []
+
+for i in range(n):
+    if (i == 0 or arr[i] != arr[i-1]) and (i == n-1 or arr[i] != arr[i+1]):
+        result.append(arr[i])
+
+print(*result)
+
+
 
 
 
