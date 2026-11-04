@@ -1072,6 +1072,17 @@ words.reverse()
 
 print(" ".join(words))
 
+# Write a program to find the frequency of each character in a given string. The output should display each character along with its frequency. 
+
+s = input()
+
+freq = {}
+
+for ch in s:
+    freq[ch] = freq.get(ch, 0) + 1
+
+for ch, count in freq.items():
+    print(ch, "-", count)
 
 
 
