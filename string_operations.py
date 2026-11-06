@@ -1084,6 +1084,24 @@ for ch in s:
 for ch, count in freq.items():
     print(ch, "-", count)
 
+# Given a string, count the number of consecutive occurrences of each character and print the character followed by its count. The output should display
+# each character and its count in the order they appear in the input string.
+
+s = input()
+
+count = 1
+result = ""
+
+for i in range(1, len(s)):
+    if s[i] == s[i - 1]:
+        count += 1
+    else:
+        result += s[i - 1] + str(count)
+        count = 1
+
+result += s[-1] + str(count)
+
+print(result)
 
 
 
