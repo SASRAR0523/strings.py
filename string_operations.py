@@ -1103,6 +1103,30 @@ result += s[-1] + str(count)
 
 print(result)
 
+# Write a program to check if a given string is a valid password. A valid password must contain at least
+# one uppercase letter, one lowercase letter, one digit, and one special character.
+
+s = input()
+
+upper = False
+lower = False
+digit = False
+special = False
+
+for ch in s:
+    if ch.isupper():
+        upper = True
+    elif ch.islower():
+        lower = True
+    elif ch.isdigit():
+        digit = True
+    else:
+        special = True
+
+if upper and lower and digit and special:
+    print("Valid Password")
+else:
+    print("Invalid Password")
 
 
 
