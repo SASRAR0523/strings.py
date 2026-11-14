@@ -1144,6 +1144,18 @@ if new_s == new_s[::-1]:
 else:
     print("false")
 
+# Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+
+s = input()
+
+words = s.split()
+
+result = []
+
+for word in words:
+    result.append(word[::-1])
+
+print(" ".join(result))
 
 
 
