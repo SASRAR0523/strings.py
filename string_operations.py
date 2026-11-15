@@ -1157,6 +1157,25 @@ for word in words:
 
 print(" ".join(result))
 
+# Given a string, reverse the characters in the string without altering the positions of the spaces. The string can contain lowercase and uppercase alphabets and spaces.
+
+s = list(input())
+
+left = 0
+right = len(s) - 1
+
+while left < right:
+    if s[left] == ' ':
+        left += 1
+    elif s[right] == ' ':
+        right -= 1
+    else:
+        s[left], s[right] = s[right], s[left]
+        left += 1
+        right -= 1
+
+print(''.join(s))    
+
 
 
 
