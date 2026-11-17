@@ -1176,9 +1176,20 @@ while left < right:
 
 print(''.join(s))    
 
+# Write a Java program that reads a sentence and counts the number of occurrences of each word using a map.
+# Print the word counts in the format word=frequency. Words should be case-insensitive and punctuation marks should be ignored.
 
+s = input().lower()
+s = ''.join(ch if ch.isalnum() or ch == ' ' else '' for ch in s)
 
+words = s.split()
+freq = {}
 
+for word in words:
+    freq[word] = freq.get(word, 0) + 1
+
+for word, count in freq.items():
+    print(word + "=" + str(count))
 
 
 
