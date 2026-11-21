@@ -1191,6 +1191,16 @@ for word in words:
 for word, count in freq.items():
     print(word + "=" + str(count))
 
+# Given a positive integer N, print the product of all digits present in N.
+
+n = input()
+
+product = 1
+
+for digit in n:
+    product *= int(digit)
+
+print(product)
 
 
 
