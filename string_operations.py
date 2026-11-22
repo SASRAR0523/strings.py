@@ -1202,6 +1202,15 @@ for digit in n:
 
 print(product)
 
+# You are given a string str. Your task is to write a Java program to swap the pairs of characters of the string. If the string contains an odd number of characters, then the last character remains unchanged.
+
+s = input()
+arr = list(s)
+
+for i in range(0, len(arr) - 1, 2):
+    arr[i], arr[i + 1] = arr[i + 1], arr[i]
+
+print("".join(arr))
 
 
 
