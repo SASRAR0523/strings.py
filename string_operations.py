@@ -1212,9 +1212,16 @@ for i in range(0, len(arr) - 1, 2):
 
 print("".join(arr))
 
+# You are given two input strings: string1 and string2. Your task is to check whether string2 is present in string1 as a substring. Return 1 if it is present, otherwise return -1.
+# This task requires familiarity with string handling and substring searching operations.
 
+s1 = input()
+s2 = input()
 
-
+if s2 in s1:
+    print(1)
+else:
+    print(-1)
 
 
 
