@@ -1223,7 +1223,22 @@ if s2 in s1:
 else:
     print(-1)
 
+# Given a string s, find the longest palindromic substring in s.
 
+s = input()
+
+res = ""
+
+for i in range(len(s)):
+    for left, right in [(i, i), (i, i + 1)]:
+        while left >= 0 and right < len(s) and s[left] == s[right]:
+            if right - left + 1 > len(res):
+                res = s[left:right + 1]
+
+            left -= 1
+            right += 1
+
+print(res)
 
 
 
